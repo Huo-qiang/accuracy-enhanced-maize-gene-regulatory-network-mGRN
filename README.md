@@ -1,1 +1,1 @@
-accuracy-enhanced-maize-gene-regulatory-network
+accuracy-enhanced-maize-gene-regulatory-network (mGRN)
