@@ -178,7 +178,7 @@ do
 	         dirfa="/mnt/diskRAID/Huo/DAPseq/gem/results/meme/fa"
 		    base=$(basename $sample ".rmblacklist.bed")
 
-		    meme-chip -minw 6 -maxw 12 -ccut 100 -meme-nmotifs 0 -spamo-skip -fimo-skip -oc ${dirmeme}/${base} ${dirfa}/${base}.fa
+		    meme-chip -minw 6 -maxw 12 -meme-p 30 -meme-nmotifs 0  -meme-searchsize 0 -spamo-skip -fimo-skip -oc ${dirmeme}/${base} ${dirfa}/${base}.fa
 
 	    done;
 ##############################################################################################################################################################
