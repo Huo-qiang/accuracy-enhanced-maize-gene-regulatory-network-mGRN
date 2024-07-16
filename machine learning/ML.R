@@ -91,7 +91,7 @@ mertics_10f[3,12] <- sd(mertics_10f[3,1:10])
 mertics_10f[2,12] <- sd(mertics_10f[2,1:10])
 mertics_10f[1,12] <- sd(mertics_10f[1,1:10])
 
-write.table(format(mertics_10f,digits=3), "mertics_10f_101cv.txt", quote = F, row.names = T, sep = "\t")
+write.table(format(mertics_10f,digits=3), "mertics_10f_cv.txt", quote = F, row.names = T, sep = "\t")
 ##Adjustment parameters
 library(caret)
 customRF <- list(type = "Classification", library = "randomForest", loop = NULL,
@@ -135,5 +135,5 @@ rf.pred.test<- predict(mod,type = "prob",test)
 rf.pred.value <- ifelse(rf.pred.test[,2]>=0.5,1,0)
 table(test$CLASS,rf.pred.value)
 test.result<-data.frame(ID=test1$ID,CLASS=rf.pred.value,prob=rf.pred.test[,2])
-write.csv(test.result,"seed101.alldata.result.csv",row.names = F)
+write.csv(test.result,"alldata.result.csv",row.names = F)
 ##
