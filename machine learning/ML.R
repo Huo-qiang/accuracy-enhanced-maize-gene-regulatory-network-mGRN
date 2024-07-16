@@ -15,7 +15,6 @@ test<-testset[,-1]
 
 library(caret)
 library(pROC)
-set.seed(101)
 folds <- createFolds(train$CLASS, k = 10)
 
 cv_results <- lapply(folds, function(x) {
@@ -124,7 +123,7 @@ customRF <- list(type = "Classification", library = "randomForest", loop = NULL,
 trControl <- trainControl(method="repeatedcv", number=10, repeats=3)
 tunegrid <- expand.grid(mtry=c(3,10,20,50,100,300,700,1000,2000), 
                         ntree=c(500,700, 800, 1000, 1500, 2000))
-set.seed(101)
+
 rf_custom <- train(CLASS ~., data = train,method=customRF, 
                     metric="Accuracy", tuneGrid=tunegrid, 
                     trControl=trControl)
