@@ -27,7 +27,7 @@ In this work:
 - **mGRN/**: Contains specific regulatory relationships and tissue-specific mGRN regulatory relationships across 6 tissues
 - **mGRN construct/**: Scripts and methods used to construct the network
 - **machine learning/**: Implementation of machine learning algorithms used to predict key TFs
-- **Merged-greylist-and-noise-peak.bed**: DAP-seq greylist file for filtering false positive peaks
+- **ck_puc57_greylist_merge_sorted_final.bed**: DAP-seq greylist file for filtering false positive peaks
 
 ## Data Availability
 
