@@ -23,7 +23,6 @@ In this work:
 
 - **ampDAP-seq/**: Contains scripts and data related to DNA affinity purification sequencing analyses
 - **Motif/**: Contains MEME files for each TF's binding motif
-- **TF_peaks_files/**: Contains peak files for each transcription factor
 - **mGRN/**: Contains specific regulatory relationships and tissue-specific mGRN regulatory relationships across 6 tissues
 - **mGRN construct/**: Scripts and methods used to construct the network
 - **machine learning/**: Implementation of machine learning algorithms used to predict key TFs
