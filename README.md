@@ -22,11 +22,12 @@ In this work:
 ## Repository Structure
 
 - **ampDAP-seq/**: Contains scripts and data related to DNA affinity purification sequencing analyses
-- **Motif/**: TF binding motif data and analyses
-- **TF_peaks_files/**: Peak files for transcription factor binding sites
-- **mGRN/**: Main data files for the maize gene regulatory network
+- **Motif/**: Contains MEME files for each TF's binding motif
+- **TF_peaks_files/**: Contains peak files for each transcription factor
+- **mGRN/**: Contains specific regulatory relationships and tissue-specific mGRN regulatory relationships across 6 tissues
 - **mGRN construct/**: Scripts and methods used to construct the network
-- **machine learning/**: Implementation of machine learning algorithms used to optimize the network
+- **machine learning/**: Implementation of machine learning algorithms used to predict key TFs
+- **Merged-greylist-and-noise-peak.bed**: DAP-seq greylist file for filtering false positive peaks
 
 ## Data Availability
 
@@ -34,8 +35,9 @@ This repository provides:
 
 1. The largest collection of experimental TF binding sites in maize
 2. A highly optimized regulatory network (mGRN+)
-3. Tissue-specific network modules
+3. Tissue-specific network modules across 6 major tissues
 4. Computational methods for network construction and optimization
+5. TF binding motifs in MEME format
 
 ## Usage
 
@@ -67,7 +69,7 @@ To construct the mGRN+ network:
 1. Follow the scripts in `mGRN construct/`
 2. Integrate chromatin accessibility data
 3. Combine with gene expression data
-4. Apply the machine learning models in `machine learning/` for optimization
+4. Apply the machine learning models in `machine learning/` for key TF prediction
 
 ## Applications
 
@@ -76,17 +78,15 @@ This work provides valuable resources for:
 - Identification of key regulatory genes
 - Crop improvement applications
 - Molecular breeding approaches
+- Investigation of tissue-specific regulatory mechanisms
 
 ## Citation
 
 If you use the data or methods from this repository, please cite our paper:
-Exploring maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites. Huo et al., 2025.
-
+Exploring maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites.
 
 ## Contact
 
-For questions or collaborations, please contact [huoqiang@cau.edu.cn].
-
----
+For questions or collaborations, please contact Qiang Huo [huoqiang@cau.edu.cn].
 
 *This repository contains the data and methods supporting our research on maize gene regulatory networks, providing a comprehensive resource for the scientific community working on crop improvement and plant regulatory genomics.*
