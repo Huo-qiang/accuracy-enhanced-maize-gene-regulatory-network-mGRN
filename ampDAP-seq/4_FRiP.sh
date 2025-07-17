@@ -10,15 +10,15 @@
 # This script calculates the Fraction of Reads in Peaks (FRiP) score for each BAM file in a directory.
 # For each BAM file:
 #   1. Counts total reads using Samtools.
-#   2. Counts reads overlapping with peaks (from GEM results) using Bedtools.
+#   2. Counts reads overlapping with peaks (from macs3 results) using Bedtools.
 #   3. Computes FRiP as (reads_in_peaks / total_reads).
 #   4. Outputs the sample name, FRiP score, and label to a file in the FRiP directory.
 # Assumes peaks files are in BED format and named consistently with BAM files.
 
 # Set directory paths
-dirdedupbam="/mnt/diskRAID/Huo/DAPseq/dedupbam"  # Directory containing deduplicated sorted BAM files
-dirgem="/mnt/diskRAID/Huo/DAPseq/gem/results"  # Directory containing GEM peak files (.GEM_rmgreylist.bed)
-dirFRIP="/mnt/diskRAID/Huo/DAPseq/FRiP"  # Directory for output FRiP score files
+dirdedupbam="/public/home/huo/DAP/bam"  # Directory containing deduplicated sorted BAM files
+dirpeak="/public/home/huo/DAP/macs3_results"  # Directory containing macs3 peak files 
+dirFRIP="/public/home/huo/DAP/FRiP"  # Directory for output FRiP score files
 
 # Create output directory if it doesn't exist
 mkdir -p "$dirFRIP"
