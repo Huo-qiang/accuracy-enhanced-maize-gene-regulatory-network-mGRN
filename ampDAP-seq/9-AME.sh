@@ -16,8 +16,8 @@
 # Define paths
 input_dir="/public/home/huo/DAP/fa"  # Input directory containing FASTA files (*.fa)
 output_dir="/public/home/huo/DAP/AME"  # Output directory for AME results
-db1="/mnt/disk16t/DAP/new_DAP/ArabidopsisDAPv1.meme"  # Arabidopsis dap-seq motif database
-db2="/mnt/disk16t/DAP/new_DAP/JASPAR2024_CORE_non-redundant_pfms.meme"  # jaspar2024 motif database
+db1="ArabidopsisDAPv1.meme"  # Arabidopsis dap-seq motif database
+db2="JASPAR2024_CORE_non-redundant_pfms.meme"  # jaspar2024 motif database
 
 # Define the AME executable path
 ame_exec="/public/home/meme-5.5.1/src/ame"
