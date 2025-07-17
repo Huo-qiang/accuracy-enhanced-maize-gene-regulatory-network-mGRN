@@ -17,15 +17,15 @@
 # It runs processes concurrently (limited by max_jobs) for efficiency, using background jobs and temporary files.
 
 # Define input and output directories
-dirmeme="/mnt/disk16t/DAP/new_DAP/macs3/161_newck_q0.05/resized_peaks/sort"  # Directory containing input BED files (*_filtered.bed)
-dirfa="/mnt/disk16t/DAP/new_DAP/fa_161_top600_200bp_before"  # Directory for output FASTA files
+dirmeme="/public/home/huo/DAP/MSPC"  # Directory containing input BED files (*_filtered.bed)
+dirfa="/public/home/huo/DAP/fa"  # Directory for output FASTA files
 
 # Set maximum concurrent jobs
 max_jobs=100
 job_count=0  # Counter for current running jobs
 
 # Define reference genome FASTA file
-ref_fasta="/mnt/disk16t/DAP/new_DAP/Zea_mays.B73_RefGen_v4.49.dna.chr.fa"
+ref_fasta="/public/home/huo/Zea_mays.B73_RefGen_v4.49.dna.chr.fa"
 
 # Ensure output directory exists
 mkdir -p "$dirfa"
