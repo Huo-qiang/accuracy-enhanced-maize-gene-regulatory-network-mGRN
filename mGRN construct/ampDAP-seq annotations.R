@@ -53,16 +53,16 @@ for (file in files) {
     ## plot
     
     pdf(paste("~/database/dap/TSS-enrich/",fn,".TSS-enrich.pdf",sep=""))
-    print(plotAvgProf(tagMatrix, xlim=c(-3000, 3000), xlab="Genomic (5'->3')", ylab = "Read Count Frequency"))
+    print(plotAvgProf(tagMatrix, xlim=c(-5000, 5000), xlab="Genomic (5'->3')", ylab = "Read Count Frequency"))
     dev.off()
     
     pdf(paste("~/database//dap/heatmap/",fn,".TSS-heatmap.pdf",sep=""))
-    print(tagHeatmap(tagMatrix, xlim=c(-3000, 3000), xlab="Genomic (5'->3')", ylab = "Read Count Frequency", color="blue4"))
+    print(tagHeatmap(tagMatrix, xlim=c(-5000, 5000), xlab="Genomic (5'->3')", ylab = "Read Count Frequency", color="blue4"))
     dev.off()
     
     ## peak
     
-    peakannotate <- annotatePeak(peak, tssRegion=c(-3000, 3000), TxDb=cornseqinfo, addFlankGeneInfo=TRUE, flankDistance=50000) ## peak的注释
+    peakannotate <- annotatePeak(peak, tssRegion=c(-5000, 1), TxDb=cornseqinfo, addFlankGeneInfo=TRUE, flankDistance=50000) ## peak的注释
     as.GRanges(peakannotate)
     head(as.GRanges(peakannotate))
     
