@@ -1,4 +1,4 @@
-# DAP-seq Analysis Pipeline
+# ampDAP-seq （DAP-seq） Analysis Pipeline
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 *(简要中文描述：这是一个DAP-seq分析管道的Bash脚本集合，从reads比对到motif发现和比较。脚本已注解，适合SLURM集群运行。)*
@@ -36,6 +36,37 @@ The scripts are numbered sequentially (1 to 10) to indicate the recommended orde
 - **Environment**: SLURM cluster recommended for large datasets; adjust paths and variables in scripts as needed.
 - **Installation Tip**: Use conda/mamba to create an environment: `mamba create -n dap_pipeline bowtie2 macs3 bedtools samtools r-base meme`.
 
-## Installation
+### Scripts Overview
 
-1. Clone the repository:
+| Script                  | Description |
+|-------------------------|-------------|
+| **1-bowtie.sh**        | Aligns FASTQ reads to a reference genome using Bowtie2, with deduplication and sorting. Outputs BAM files. |
+| **2-macs3.sh**         | Performs peak calling on BAM files using MACS3, handling replicates and controls. Outputs BED files. |
+| **3-bam2bw.sh**        | Converts BAM files to BigWig format for genome browser visualization using deepTools or similar. |
+| **4-FRiP.sh**          | Calculates Fraction of Reads in Peaks (FRiP) scores using Samtools and Bedtools. |
+| **5-Phantompeakqualtools_QC.sh** | Runs phantompeakqualtools for BAM quality control, generating PDF plots and text reports. Supports concurrency. |
+| **6-MSPC.sh**          | Runs MSPC for multi-sample consensus peak calling on BED file pairs (e.g., replicates). Outputs consensus BED. |
+| **7-bedtools_fasta.sh**| Extracts FASTA sequences from top peaks (e.g., top 600, centered and extended) using Bedtools. Supports high concurrency. |
+| **8-memechip.sh**      | Discovers de novo motifs in FASTA files using MEME-ChIP, with parameters for width and skipping analyses. |
+| **9-AME.sh**           | Performs motif enrichment analysis on FASTA files using AME against two databases. Supports concurrency. |
+| **10-TOMTOM.sh**       | Compares discovered motifs to known databases using TomTom, identifying similarities. |
+
+### Example Workflow
+- Input: Raw FASTQ files.
+- Output: Aligned BAMs → Peaks (BED) → QC metrics → Extracted FASTA → Motifs (MEME) → Enrichment/Comparison results.
+- Total runtime depends on dataset size; use SLURM for parallel processing.
+
+## Troubleshooting
+- **Errors**: Check paths, tool installations, and permissions. Scripts include error handling (e.g., skipping missing files).
+- **Customization**: Adjust parameters like `max_jobs` for concurrency or thresholds in peak calling/motif tools.
+- **Logs**: Each script echoes progress and errors to stdout.
+
+## Contributing
+Pull requests are welcome! For major changes, open an issue first to discuss.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. (Create a LICENSE file if needed.)
+
+## Acknowledgments
+- Built with tools from the MEME suite, MACS3, Bedtools, and others.
+- Inspired by standard DAP-seq workflows for plant genomics (e.g., maize/Arabidopsis).
