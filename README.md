@@ -78,6 +78,8 @@ This work provides valuable resources for:
 - Crop improvement applications
 - Molecular breeding approaches
 - Investigation of tissue-specific regulatory mechanisms
+- IGV: [https://dap-seq.maize-endosperm.cn/]
+- Processed data: [https://doi.org/10.5281/zenodo.16027369]
 
 ## Citation
 
