@@ -80,6 +80,7 @@ This work provides valuable resources for:
 - Investigation of tissue-specific regulatory mechanisms
 - IGV: [https://dap-seq.maize-endosperm.cn/]
 - Processed data: [https://doi.org/10.5281/zenodo.16027369]
+- Raw data: [https://ngdc.cncb.ac.cn/gsa/browse/CRA022036]
 
 ## Citation
 
