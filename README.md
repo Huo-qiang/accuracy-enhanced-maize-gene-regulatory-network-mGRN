@@ -86,7 +86,7 @@ This work provides valuable resources for:
 
 If you use the data or methods from this repository, please cite our paper:
 
-Qiang Huo, Ziru Zhang, Kechun Zhang, Qun Wang, Weixiao Zhang, Xinyu Ye, Qingya Lyu, David W Galbraith, Zeyang Ma, Rentao Song. (2025). Exploring maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites. Molecular Plant. Accept.
+Huo Q., Zhang Z., Zhang K., Wang Q., Zhang W., Ye X., Lyu Q., Galbraith D.W, Ma Z., and Song R. (2025). Exploring maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites. Molecular Plant doi: [https://doi.org/10.1016/j.molp.2025.08.009.]
 
 ## Contact
 
