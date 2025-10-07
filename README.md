@@ -86,7 +86,7 @@ This work provides valuable resources for:
 
 If you use the data or methods from this repository, please cite our paper:
 
-Huo Q., Zhang Z., Zhang K., Wang Q., Zhang W., Ye X., Lyu Q., Galbraith D.W, Ma Z., and Song R. (2025). Exploring the maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites. Molecular Plant doi: [https://doi.org/10.1016/j.molp.2025.08.009]
+Huo Q., Zhang Z., Zhang K., Wang Q., Zhang W., Ye X., Lyu Q., Galbraith D.W., Ma Z., and Song R. (2025). Exploring the maize transcriptional regulatory landscape through large-scale profiling of transcription factor binding sites. Mol. Plant. 18, 1777–1798. doi: [https://doi.org/10.1016/j.molp.2025.08.009]
 
 ## Contact
 
