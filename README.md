@@ -90,6 +90,6 @@ Huo Q., Zhang Z., Zhang K., Wang Q., Zhang W., Ye X., Lyu Q., Galbraith D.W., Ma
 
 ## Contact
 
-For questions or collaborations, please contact Qiang Huo [huoqiang@cau.edu.cn].
+For questions or collaborations, please contact Qiang Huo [huoqiang138@163.com].
 
 *This repository contains the data and methods supporting our research on maize gene regulatory networks, providing a comprehensive resource for the scientific community working on crop improvement and plant regulatory genomics.*
